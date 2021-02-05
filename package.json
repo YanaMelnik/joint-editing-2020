@@ -2,10 +2,18 @@
   "name": "root",
   "private": true,
   "devDependencies": {
+    "husky": "^4.3.8",
     "lerna": "^3.22.1"
   },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint",
+      "pre-push": "lerna run test"
+    }
+  },
   "scripts": {
-    "bootstrap": "lerna bootstrap --hoist",
+    "bootstrap:CI": "lerna bootstrap --hoist",
+    "bootstrap": "lerna bootstrap --hoist && npx husky install",
     "build": "lerna run build",
     "lint": "eslint . --ext .js,.ts --fix"
   }
