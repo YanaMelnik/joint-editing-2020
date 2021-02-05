@@ -6,6 +6,7 @@
   },
   "scripts": {
     "bootstrap": "lerna bootstrap --hoist",
-    "build": "lerna run build"
+    "build": "lerna run build",
+    "lint": "eslint . --ext .js,.ts --fix"
   }
 }

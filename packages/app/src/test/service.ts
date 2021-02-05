@@ -1,3 +1,3 @@
-export function testHello () {
-    return "Test is working correct";
+export default function testHello() {
+  return 'Test is working correct';
 }

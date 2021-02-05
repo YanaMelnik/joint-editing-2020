@@ -1,5 +1,5 @@
-import { testHello } from "./service";
+import testHello from './service';
 
 test('is service work correct', () => {
-    expect(testHello()).toBe("Test is working correct");
-})
+  expect(testHello()).toBe('Test is working correct');
+});
