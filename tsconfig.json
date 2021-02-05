@@ -1,0 +1,13 @@
+{
+  "extends": "./tsconfig.build.json",
+  "compilerOptions": {
+    "baseUrl": "./packages",
+    "paths": {
+      "@joint-editing/app": ["app/src"],
+      "@joint-editing/diff-library": ["diff-library/src"],
+      "@joint-editing/server": ["server/src"],
+      "@joint-editing/websocket-library": ["websocket-library/src"],
+      "@joint-editing/*": ["*/src"]
+    }
+  }
+}
