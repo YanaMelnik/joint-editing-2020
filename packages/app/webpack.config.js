@@ -19,6 +19,10 @@ module.exports = {
     },
     resolve: {
         extensions: ['.tsx', '.ts', '.js', '.json'],
+        alias: {
+            "@joint-editing/diff-library": path.resolve(__dirname, '../diff-library/src'),
+            "@joint-editing/websocket-library": path.resolve(__dirname, '../webSocket-library/src'),
+        }
     },
     output: {
         filename: '[name].[contenthash].js',
