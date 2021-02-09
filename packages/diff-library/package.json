@@ -2,11 +2,12 @@
   "name": "@joint-editing/diff-library",
   "version": "1.0.0",
   "description": "Library for sampling text diff",
-  "main": "index.js",
+  "main": "dist/index.js",
   "scripts": {
     "dev": "webpack --mode development",
     "build": "webpack --mode production",
-    "watch": "webpack --mode development --watch"
+    "watch": "webpack --mode development --watch",
+    "start": "webpack --mode development"
   },
   "author": "Yasha <melnik.yana.victorovna@gmail.com>",
   "license": "ISC",
@@ -21,5 +22,9 @@
     "webpack": "^5.20.2",
     "webpack-cli": "^4.5.0",
     "webpack-dev-server": "^3.11.2"
+  },
+  "dependencies": {
+    "@types/diff": "^5.0.0",
+    "diff": "^5.0.0"
   }
 }

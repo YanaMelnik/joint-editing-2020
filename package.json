@@ -13,8 +13,9 @@
   },
   "scripts": {
     "bootstrap:CI": "lerna bootstrap --hoist",
-    "bootstrap": "lerna bootstrap --hoist && npx husky install",
+    "bootstrap": "lerna bootstrap --hoist && node node_modules/husky/bin/run.js install",
     "build": "lerna run build",
-    "lint": "eslint . --ext .js,.ts --fix"
+    "lint": "eslint . --ext .js,.ts --fix",
+    "start": "lerna run start --parallel"
   }
 }

@@ -1,6 +1,9 @@
 {
   "extends": "./tsconfig.build.json",
   "compilerOptions": {
+    "lib": [
+      "webworker",
+    ],
     "baseUrl": "./packages",
     "paths": {
       "@joint-editing/app": ["app/src"],

@@ -2,6 +2,14 @@
   "extends": "../../tsconfig.json",
 
   "compilerOptions": {
-    "types": ["jest"]
+    "types": ["jest"],
+    "lib": [
+      "dom",
+      "es5",
+      "scripthost",
+      "webworker",
+      "es2017",
+      "es2017.sharedmemory"
+    ]
   }
 }
