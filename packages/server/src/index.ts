@@ -1,10 +1,10 @@
-import { applyTextDiff } from '@joint-editing/diff-library';
+// import { applyTextDiff } from "@joint-editing/diff-library";
 
 const http = require('http');
 const webSocket = require('ws');
 const { v4: uuidv4 } = require('uuid');
 
-let textState = 'Test message from server';
+const textState = 'Test message from server';
 
 const server = http.createServer();
 
@@ -28,7 +28,8 @@ wsServer.on('connection', (ws) => {
       client.send(data);
     });
 
-    textState = applyTextDiff(textState, JSON.parse(data));
+    // TODO: BUG - can't use shared library, server stopped
+    // textState = applyTextDiff(textState, JSON.parse(data));
   });
 });
 
