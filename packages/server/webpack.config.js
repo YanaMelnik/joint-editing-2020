@@ -28,7 +28,11 @@ module.exports = {
     filename: 'index.js',
     path: path.resolve(__dirname, 'dist'),
   },
-  externals: [ nodeExternals() ],
+  externals: [
+    nodeExternals({
+      allowlist: ['@joint-editing/diff-library', 'ws', 'uuid']
+    }),
+  ],
   plugins: [
     new CleanWebpackPlugin(),
   ],
